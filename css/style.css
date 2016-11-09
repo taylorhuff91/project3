@@ -1,0 +1,108 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*End of CSS Reset*/
+
+/*fonts
+font-family: 'Acme', sans-serif;
+font-family: 'Dosis', sans-serif;*/
+
+body {
+	background-image: url("../images/pattern.png");
+	margin: 0;
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Acme', sans-serif;
+	font-size: 25px;
+	color: #ca3f25;
+	margin: 0;
+}
+
+ul {
+	line-height: 20px;
+}
+
+#logo {
+	margin: 10px 0 20px 255px;
+}
+
+.mario-survey {
+	margin: 0 auto;
+	width: 800px;
+	padding: 20px 40px;
+	background: #fff; 
+}
+
+#answer {
+	font-family: 'Dosis', sans-serif;
+	font-size: 17px;
+	line-height: 25px;
+	color: #474747;
+}
+
+label[for="question1"],[for="question2"],[for="question3"],[for="question4"],[for="question5"] {
+	font-family: 'Dosis', sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 30px;
+	color: #131d5d;
+}
+
+input[type="submit"] {
+	font-family: 'Dosis', sans-serif;
+	font-size: 28px;
+	font-weight: 600;
+	color: #fff;
+	background-color: #ca3f25;
+	padding: 7px 20px;
+	text-align: center;
+	margin: 20px 0 30px 345px;
+	border: none;
+}
+
+input[type="submit"]:hover {
+	background-color: #131d5d;
+}
+
