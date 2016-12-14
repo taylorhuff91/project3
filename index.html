@@ -3,125 +3,41 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Mario Party Survey</title>
+        <title>My Notes: Home</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="https://fonts.googleapis.com/css?family=Acme|Dosis:400,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bad+Script|Oxygen:300,700" rel="stylesheet">
 
-        <link type="text/css" rel="stylesheet" href="..css/style.css" />
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="js/main.js"></script>
     </head>
 <body>
 	
-	<section class="mario-survey">
+	<section class="my-notes">
+	<a href="php/notes.php">View <em>My Notes</em></a>
 
+		<h1>Create A New Note</h1>
+		
 		<p class="notify"></p>
 
-		<h1>Time for...</h1>
-		<img id='logo' src='images/logo.png'>
+		<form name="notesForm" action="php/upload.php" onsubmit="return validation()" method="post">
+			<div class="note_row">
+				<label for='note_name' class='label'>Note Name</label>
+			    <input type ="text" name="note_name" id="note_name" placeholder="name your note...">
+			</div>
 
-		<form name="marioForm" action="php/mario.php" onsubmit="return" method="post">
+			<div class="note_row">
+				<label for='new_note' class='label'>Note Body</label>
+			    <textarea name="new_note" id="new_note" placeholder="type a new note..."></textarea>
+			</div>
 
-			<!-- Question 1 -->
-			<p>
-			<label for="question1">1) Who do you pick?<br></label>
-				<input id="answer" type="radio" name="q1_options" value="Mario">
-				<label id="answer">Mario</label><br>
-		
-				<input id="answer" type="radio" name="q1_options" value="Luigi">
-				<label id="answer">Luigi</label><br>
-		
-				<input id="answer" type="radio" name="q1_options" value="Peach">
-				<label id="answer">Peach</label><br>
-		
-				<input id="answer" type="radio" name="q1_options" value="Yoshi">
-				<label id="answer">Yoshi</label><br>
-		
-				<input id="answer" type="radio" name="q1_options" value="DK">
-				<label id="answer">DK</label><br>
-			</p>
+			<input type="submit" value="Submit">
 
-			<!-- Question 2 -->
-			<p>
-			<label for="question2">2) Which game board do you pick?<br></label>
-				<input id="answer" type="radio" name="q2_options" value="Pirate Land">
-				<label id="answer">Pirate Land</label><br>
+		</form>
 		
-				<input id="answer" type="radio" name="q2_options" value="Western Land">
-				<label id="answer">Western Land</label><br>
-		
-				<input id="answer" type="radio" name="q2_options" value="Space Land">
-				<label id="answer">Space Land</label><br>
-		
-				<input id="answer" type="radio" name="q2_options" value="Mystery Land">
-				<label id="answer">Mystery Land</label><br>
-		
-				<input id="answer" type="radio" name="q2_options" value="Horror Land">
-				<label id="answer">Horror Land</label><br>
-			</p>
-
-			<!-- Question 3 -->
-			<p>
-			<label for="question3">3) What’s your first goal?<br></label>
-				<input id="answer" type="radio" name="q3_options" value="You would go straight to the star space">
-				<label id="answer">Go straight for the star</label><br>
-		
-				<input id="answer" type="radio" name="q3_options" value="You would try to hit as many happening spaces as possible">
-				<label id="answer">Aim for the happening spaces</label><br>
-		
-				<input id="answer" type="radio" name="q3_options" value="You would try to win every minigame">
-				<label id="answer">Destroy your friendships by winning every mini game</label><br>
-		
-				<input id="answer" type="radio" name="q3_options" value="You would head for the item shop">
-				<label id="answer">Head towards the item store</label><br>
-		
-				<input id="answer" type="radio" name="q3_options" value="You would get to Boo as soon as possible">
-				<label id="answer">Find Boo immediately</label><br>
-			</p>
-
-			<!-- Question 4 -->
-			<p>
-			<label for="question4">4) What’s going to happen in the last turn?<br></label>
-				<input id="answer" type="radio" name="q4_options" value="You would steal everyone\'s coins in a battle minigame">
-				<label id="answer">Win a battle minigame that destroys everyone’s coins</label><br>
-		
-				<input id="answer" type="radio" name="q4_options" value="You would have Boo steal all the stars from another player">
-				<label id="answer">Have Boo steal every star from another player</label><br>
-		
-				<input id="answer" type="radio" name="q4_options" value="You would watch Bowser steal all of your best friend\'s stars">
-				<label id="answer">Bowser roullette steals your best friend's stars and gives them all to you and you win the entire game</label><br>
-		
-				<input id="answer" type="radio" name="q4_options" value="You would accept that you didn\'t even come close to winning">
-				<label id="answer">Accept your horrible fate that you will get no extra stars at the end</label><br>
-		
-				<input id="answer" type="radio" name="q4_options" value="You would watch in agony as something big happens for every player\'s last turn">
-				<label id="answer">Last turn goes on forever because something huge happens for every person’s last turn</label><br>
-			</p>
-
-			<!-- Question 5 -->
-			<p>
-			<label for="question5">5) The game is won, what now?<br></label>
-				<input id="answer" type="radio" name="q5_options" value="You would gloat about winning">
-				<label id="answer">Be that gloating jerk who desserved none of the stars they stole</label><br>
-		
-				<input id="answer" type="radio" name="q5_options" value="You would never talk to your friends ever again">
-				<label id="answer">Never talk to your friends ever again</label><br>
-		
-				<input id="answer" type="radio" name="q5_options" value="You would suggest playing Smash Bros">
-				<label id="answer">So who wants to play smash?</label><br>
-		
-				<input id="answer" type="radio" name="q5_options" value="You would realize that you just lost 5 hours of your life">
-				<label id="answer">We’ve been playing for 5 hours?</label><br>
-		
-				<input id="answer" type="radio" name="q5_options" value="You would KILL MARIO PARTY WITH FIRE">
-				<label id="answer">BURN THE GAME ALIVE</label><br>
-			</p>
-
-				<input type="submit" value="Submit">
-
-			</form>
-		</section>
-
-		<script src="js/main.js"></script>
+	</section>
+	
 	</body>
 </html>

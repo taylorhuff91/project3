@@ -1,3 +1,8 @@
+/*FONTS*/
+/*font-family: 'Bad Script', cursive;
+font-family: 'Oxygen', sans-serif;*/
+
+
 /* CSS Reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -23,86 +28,204 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 /*End of CSS Reset*/
 
-/*fonts
-font-family: 'Acme', sans-serif;
-font-family: 'Dosis', sans-serif;*/
-
 body {
-	background-image: url("../images/pattern.png");
+	background: url("../images/notebook.png");
+	background-color: #b4b2a2;
 	margin: 0;
+}
+
+form {
+	font-family: 'Oxygen', sans-serif;
 }
 
 h1 {
-	text-align: center;
-	font-family: 'Acme', sans-serif;
+	font-family: 'Bad Script', cursive;
+	color: #9a998b;
 	font-size: 25px;
-	color: #ca3f25;
-	margin: 0;
+	text-align: center;
 }
 
-ul {
-	line-height: 20px;
+h2 {
+	font-family: 'Oxygen', sans-serif;
+	font-size: 13px;
 }
 
-#logo {
-	margin: 10px 0 20px 255px;
+a {
+	font-family: 'Oxygen', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	text-decoration: none;
+	color: #fff;
+	width: 200px;
+	height: 20px;
+	background: #a94c4c;
+	text-align: right;
+	padding: 7px 10px 5px 10px;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 15px;
 }
 
-.mario-survey {
+a:hover {
+	color: #b4b2a2;
+}
+
+p {
+	font-family: 'Oxygen', sans-serif;
+	font-size: 16px;
+}
+
+em {
+	font-family: 'Bad Script', cursive;
+	font-size: 14px;
+	letter-spacing: 1px;
+	padding-left: 6px;
+}
+
+.my-notes {
 	margin: 0 auto;
+	background: #fff;
+	-webkit-box-shadow: 0px 2px 24px -3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 2px 24px -3px rgba(0,0,0,0.75);
+	box-shadow: 0px 2px 24px -3px rgba(0,0,0,0.75);
+	width: 960px;
+	padding: 45px 20px;
+	position: relative;
+}
+
+.note_row {
+	float: left;
+	clear: both;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+textarea {
 	width: 800px;
-	padding: 20px 40px;
-	background: #fff; 
+	height: 300px;
+	float: right;
+	margin-right: 35px;
+	resize: none;
 }
 
-#answer {
-	font-family: 'Dosis', sans-serif;
-	font-size: 17px;
-	line-height: 25px;
-	color: #474747;
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
 }
 
-label[for="question1"],[for="question2"],[for="question3"],[for="question4"],[for="question5"] {
-	font-family: 'Dosis', sans-serif;
-	font-size: 18px;
-	font-weight: 600;
-	line-height: 30px;
-	color: #131d5d;
+::-webkit-input-placeholder {
+   	color: #a94c4c;
+}
+
+:-moz-placeholder {
+   	color: #a94c4c;
+}
+
+::-moz-placeholder {
+   	color: #a94c4c;
+}
+
+:-ms-input-placeholder {  
+   	color: #a94c4c;
+}
+
+.note_row *:focus {
+	outline: 1px solid #a94c4c;
+}
+
+.adminhide {
+	display: none;	
+}
+
+input[type="text"] {
+	width: 800px;
+	float: right;
+	margin-right: 35px;
+}
+
+label {
+	float: left;
+	width: 100px;
+	display: block;
+	text-align: right;
+	font-size: 13px;
+	line-height: 16px;
+	color: #585750;
 }
 
 input[type="submit"] {
-	font-family: 'Dosis', sans-serif;
-	font-size: 28px;
-	font-weight: 600;
+	font-size: 16px;
 	color: #fff;
-	background-color: #ca3f25;
-	padding: 7px 20px;
 	text-align: center;
-	margin: 20px 0 30px 345px;
-	border: none;
+	width: 300px;
+	font-weight: 700;
+	margin-left: 330px;
+	padding: 5px 10px;
+	border: 0 none;
+	background: #9a998b;
+    cursor: pointer;
+    -webkit-border-radius: 0px;
+    border-radius: 0px; 
 }
 
 input[type="submit"]:hover {
-	background-color: #131d5d;
+	background: #a94c4c;
 }
 
+.notify {
+	font-family: 'Oxygen', sans-serif;
+	font-weight: bold;
+	margin: 20px 0 20px 35px;
+	color: #c10000;
+	width: 300px;
+}
+
+.note-heading {
+	text-align: left;
+	font-family: 'Oxygen', sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #a94c4c;
+	padding: 10px 0;
+	margin: 0 40px;
+	border-bottom: 1px solid #a94c4c;
+}
+
+.note-body {
+	font-size: 14px;
+	line-height: 23px;
+	padding: 0 40px;
+}
+
+.slidetoggle {
+	margin: 10px 40px;
+	background: #9a998b;
+	color: #fff;
+	border: none;
+	padding: 5px 8px;
+}
